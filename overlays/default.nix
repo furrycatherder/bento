@@ -1,0 +1,3 @@
+map import [
+  ./zsh-plugins
+]

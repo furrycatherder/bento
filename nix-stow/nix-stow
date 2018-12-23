@@ -1,0 +1,79 @@
+#! @bash@/bin/bash
+
+set -euo pipefail
+
+error() {
+    echo "$(basename $0): $@" >&2
+    exit 1
+}
+
+doBuild() {
+    nix build -f '<nix-stow>' --out-link ~/.nix-stow stow
+}
+
+# overlayfs has the limitation that upperdir and workdir must be in separate
+# subtrees of the same mount.  We tend to keep our /home directory on its own
+# mount, so the workdirs are kept in /home/.stow-workdirs.  This is one of the
+# implementation details preventing a rootless installation.
+#
+# We should be able to inspect the output of mount to get a list of overlays we
+# created.  Try mount | grep overlay.
+#
+# Consider unionfs as an alternative.
+doActivate() {
+    local stowDir workDir
+    stowDir=$(readlink ~/.nix-stow) || return 1
+    workDir=$(mktemp -d "/home/.stow-workdirs/stow.XXXXXXXXXX")
+
+    # This will abort if ~/.stow-workdir already exists, so we won't create
+    # multiple overlays.  This doesn't stop someone else from overlaying $HOME
+    # and borking everything anyway.  Maybe it would be better to use tmpfiles?
+    ln -svT "$workDir" ~/.stow-workdir || error "stow is already active"
+
+    # TODO: add rollbacks and stuff?
+    # TODO: use tmpfiles.d for garbage collection?
+    # ln -sfvT "$stowDir" "/nix/var/nix/profiles/per-user/$USER/stow-env"
+
+    # FIXME: fuse-overlayfs isn't working on NixOS so we'll need sudo mount
+    # privilege for now.
+    sudo mount -v -t overlay \
+        -o workdir="$workDir" \
+        -o lowerdir="$stowDir" \
+        -o upperdir="$HOME" \
+        overlay "$HOME"
+}
+
+doDeactivate() {
+    # FIXME: there could be multiple overlays over $HOME.
+    # FIXME: should be fusermount -z, requires sudo for now.
+    sudo umount -v -l "$HOME"
+
+    rm -rfv "$(readlink ~/.stow-workdir)"
+    rm -v ~/.stow-workdir
+}
+
+cmd="$1"
+shift 1
+
+# Consider how to replace verbs with options like -S, -D, and -R.  Currently we
+# make just one link farm and use that as our overlay, but if we kept track of
+# which overlays are applied in what order, we could create link farms
+# modularly to emulate the "packages" feature of stow.  There is also the
+# option of specifying multiple lowerdirs in our mount call.
+case "$cmd" in
+    build)
+        doBuild
+        ;;
+    activate)
+        doBuild
+        doActivate
+        ;;
+    deactivate)
+        doDeactivate
+        ;;
+    *) 
+        exit 1
+        ;;
+esac
+
+# vim: set sw=4 ts=4 et ft=sh:

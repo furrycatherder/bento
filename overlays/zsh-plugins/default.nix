@@ -1,7 +1,7 @@
-self: super:
+final: previous:
+
+with final;
 
 {
-
-  zshPlugins = super.recurseIntoAttrs (super.callPackage ./plugins {});
-
+  zshPlugins = recurseIntoAttrs (callPackage ./plugins {});
 }

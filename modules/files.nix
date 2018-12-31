@@ -26,7 +26,8 @@ in
       };
 
       source = mkOption {
-        type = types.path;
+        type = with types; nullOr path;
+        default = null;
         description = ''
           Path of the source file. The file name must not start with a period
           since Nix will not allow such names in the Nix store. This may refer

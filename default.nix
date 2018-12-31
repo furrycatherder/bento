@@ -28,7 +28,9 @@ in
             path = file.source;
           };
 
-          files = lib.attrValues config.home.files;
+          files = builtins.filter (f: f.source != null) (
+            lib.attrValues config.home.files
+          );
 
         in
 

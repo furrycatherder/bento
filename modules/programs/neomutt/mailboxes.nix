@@ -4,10 +4,12 @@ with lib;
 
 let
 
-  imapAddr = "imap://${config.username}@${name}"
+  addr = "${config.username}@${name}";
+
+  imapAddr = "imap://${addr}"
     + optionalString (config.imapPort != null) ":${toString config.imapPort}";
 
-  smtpAddr = "smtp://${config.username}@${name}"
+  smtpAddr = "smtp://${addr}"
     + optionalString (config.smtpPort != null) ":${toString config.smtpPort}";
 
 in
@@ -52,6 +54,7 @@ in
         mailboxes ${imapAddr}/Inbox
         account-hook ${imapAddr} "set imap_user = ${config.username}"
         account-hook ${imapAddr} "set imap_pass = ${config.password}"
+        account-hook ${imapAddr} "set from = ${addr}"
         folder-hook ${imapAddr} "set folder = ${imapAddr}"
         folder-hook ${imapAddr} "set smtp_url = ${smtpAddr}"
         folder-hook ${imapAddr} "set smtp_pass = ${config.password}"

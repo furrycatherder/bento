@@ -8,7 +8,7 @@ error() {
 }
 
 doBuild() {
-    nix build -f '<nix-stow>' --out-link ~/.nix-stow stow
+    nix build -f '<nix-stow>' "$@" stow
 }
 
 # overlayfs has the limitation that upperdir and workdir must be in separate
@@ -62,10 +62,10 @@ shift 1
 # option of specifying multiple lowerdirs in our mount call.
 case "$cmd" in
     build)
-        doBuild
+        doBuild 
         ;;
     activate)
-        doBuild
+        doBuild --out-link ~/.nix-stow 
         doActivate
         ;;
     deactivate)

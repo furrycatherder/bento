@@ -5,10 +5,10 @@ with lib;
 let
 
   imapAddr = "imap://${config.username}@${name}"
-    + optionalString (config.imapPort != null) ":${config.imapPort}";
+    + optionalString (config.imapPort != null) ":${toString config.imapPort}";
 
   smtpAddr = "smtp://${config.username}@${name}"
-    + optionalString (config.smtpPort != null) ":${config.smtpPort}";
+    + optionalString (config.smtpPort != null) ":${toString config.smtpPort}";
 
 in
 

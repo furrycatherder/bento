@@ -67,7 +67,7 @@ in
         set certificate_file = ~/.mutt/certificates
       '' + optionalString (cfg.extraConfig != null) cfg.extraConfig;
 
-      home.files.".config/neomutt/mailcap".text = with pkgs; ''
+      home.files.".mailcap".text = with pkgs; ''
         text/html; ${w3m}/bin/w3m -I %{charset} -T text/html; copiousoutput;
         text/calendar; ${khal}/bin/khal printics; copiousoutput;
         image/*; ${feh}/bin/feh %s;

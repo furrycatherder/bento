@@ -1,0 +1,8 @@
+github:
+    - chisui/zsh-nix-shell
+    - spwhitt/nix-zsh-completions
+    - zsh-users/zsh-autosuggestions
+    - zsh-users/zsh-completions
+    - zsh-users/zsh-syntax-highlighting
+
+# vim: sw=4 ts=4 et ft=yaml:

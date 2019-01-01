@@ -3,5 +3,5 @@ final: previous:
 with final;
 
 {
-  zshPlugins = recurseIntoAttrs (callPackage ./plugins {});
+  zshPlugins = recurseIntoAttrs (buildPlugins (lib.importJSON ./plugins.lock));
 }

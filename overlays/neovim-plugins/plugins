@@ -1,0 +1,18 @@
+github:
+    - LnL7/vim-nix
+    - Shougo/deoplete.nvim
+    - dylanaraps/wal.vim
+    - junegunn/goyo.vim
+    - kien/ctrlp.vim
+    - mhinz/vim-signify
+    - neomake/neomake
+    - tpope/vim-fugitive
+    - tpope/vim-surround
+    - tpope/vim-unimpaired
+    - tpope/vim-vinegar
+    - vim-airline/vim-airline
+    - vim-airline/vim-airline-themes
+    - zchee/deoplete-clang
+    - zchee/deoplete-jedi
+
+# vim: sw=4 ts=4 et ft=yaml:

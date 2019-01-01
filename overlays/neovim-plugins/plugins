@@ -3,6 +3,7 @@ github:
     - Shougo/deoplete.nvim
     - dylanaraps/wal.vim
     - junegunn/goyo.vim
+    - junegunn/vim-plug
     - kien/ctrlp.vim
     - mhinz/vim-signify
     - neomake/neomake

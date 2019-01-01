@@ -5,7 +5,7 @@ set -euo pipefail
 export NIX_PATH=nix-stow='@cwd@'${NIX_PATH:+':'}$NIX_PATH
 
 error() {
-    echo "$(basename $0): $@" >&2
+    echo "$(basename "$0"): $*" >&2
     exit 1
 }
 

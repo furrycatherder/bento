@@ -1,10 +1,11 @@
-{ pkgs }:
+{ pkgs, cwd }:
 
 pkgs.stdenv.mkDerivation {
   name = "nix-stow";
 
   # Dependencies to be injected into the shell script.
   inherit (pkgs) bash;
+  inherit cwd;
 
   buildCommand = ''
     install -v -D -m755 ${./nix-stow} $out/bin/nix-stow

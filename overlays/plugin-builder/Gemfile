@@ -6,4 +6,7 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # gem "rails"
 
-gem "progressbar", "~> 1.10"
+
+gem "parallel", "~> 1.12"
+
+gem "ruby-progressbar", "~> 1.10"

@@ -4,6 +4,10 @@ let
 
   cfg = config.programs.command-not-found;
 
+  command-not-found = pkgs.callPackage ./command-not-found.nix {
+    inherit (cfg) dbPath;
+  };
+
 in
 
   {
@@ -27,7 +31,7 @@ in
       home.files.".zshrc".text = mkIf config.programs.zsh.enable ''
         # This function is called whenever a command is not found.
         command_not_found_handler() {
-          local p=${pkgs.command-not-found}/bin/command-not-found
+          local p=${command-not-found}/bin/command-not-found
           if [ -x $p -a -f ${cfg.dbPath} ]; then
             # Run the helper program.
             $p "$@"

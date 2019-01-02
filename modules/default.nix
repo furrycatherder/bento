@@ -18,6 +18,7 @@ in
     ./programs/command-not-found
     ./programs/direnv
     ./programs/neomutt
+    ./programs/neovim
     ./programs/zsh
   ] ++ [
     pkgsModule

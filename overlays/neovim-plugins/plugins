@@ -4,12 +4,15 @@ github:
     - airblade/vim-gitgutter
     - dylanaraps/wal.vim
     - editorconfig/editorconfig-vim
+    - farmergreg/vim-lastplace
     - itchyny/lightline.vim
     - junegunn/goyo.vim
     - junegunn/vim-plug
+    - justinmk/vim-dirvish
     - kien/ctrlp.vim
     - mattn/emmet-vim
     - mhinz/vim-signify
+    - mhinz/vim-startify
     - neomake/neomake
     - scrooloose/nerdtree
     - terryma/vim-multiple-cursors
@@ -21,6 +24,9 @@ github:
     - vim-airline/vim-airline
     - vim-airline/vim-airline-themes
     - w0rp/ale
+    - wellle/targets.vim
+    - wellle/tmux-complete.vim
+    - wellle/visual-split.vim
     - zchee/deoplete-clang
     - zchee/deoplete-jedi
 

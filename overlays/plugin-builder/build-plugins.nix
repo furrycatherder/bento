@@ -5,8 +5,11 @@ pluginSpecs:
 with builtins;
 
 let
+
+  cleanStr = replaceStrings [ "." ] [ "-" ];
+
   fetchPlugin = plugin: rec {
-    name = baseNameOf plugin.url;
+    name = cleanStr (baseNameOf plugin.url);
     value = fetchgit {
       inherit name;
       inherit (plugin) url rev sha256;
@@ -14,5 +17,7 @@ let
   };
 
   plugins = map fetchPlugin pluginSpecs;
+
 in
+
   listToAttrs plugins

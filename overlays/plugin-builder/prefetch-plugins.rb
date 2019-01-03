@@ -3,7 +3,7 @@
 require 'yaml'
 require 'json'
 require 'parallel'
-require 'progressbar'
+require 'ruby-progressbar'
 
 plugins = YAML.load (File.new "./plugins").read
 total_plugins = plugins["github"].length # FIXME: merge all sublists instead

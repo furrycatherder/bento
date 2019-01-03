@@ -1,6 +1,13 @@
 github:
+    - bric3/nice-exit-code
     - chisui/zsh-nix-shell
+    - denolfe/zsh-travis
+    - mafredri/zsh-async
+    - seletskiy/zsh-fuzzy-search-and-edit
     - spwhitt/nix-zsh-completions
+    - tomplex/jenkins-zsh
+    - zdharma/fast-syntax-highlighting
+    - zdharma/zredis
     - zsh-users/zsh-autosuggestions
     - zsh-users/zsh-completions
     - zsh-users/zsh-syntax-highlighting

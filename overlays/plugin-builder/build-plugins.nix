@@ -1,4 +1,4 @@
-{ lib, fetchgit }:
+{ lib, recurseIntoAttrs, fetchgit }:
 
 pluginSpecs:
 
@@ -16,8 +16,8 @@ let
     };
   };
 
-  plugins = map fetchPlugin pluginSpecs;
+  plugins = map fetchPlugin (lib.importJSON pluginSpecs);
 
 in
 
-  listToAttrs plugins
+  recurseIntoAttrs (listToAttrs plugins)

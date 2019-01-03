@@ -1,16 +1,16 @@
 { pkgs, cwd }:
 
 pkgs.stdenv.mkDerivation {
-  name = "nix-stow";
+  name = "bento";
 
   # Dependencies to be injected into the shell script.
   inherit (pkgs) bash;
   inherit cwd;
 
   buildCommand = ''
-    install -v -D -m755 ${./nix-stow} $out/bin/nix-stow
+    install -v -D -m755 ${./bento} $out/bin/bento
 
-    substituteAllInPlace $out/bin/nix-stow
+    substituteAllInPlace $out/bin/bento
   '';
 
   meta = with pkgs.stdenv.lib; {

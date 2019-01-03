@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-export NIX_PATH=nix-stow='@cwd@'${NIX_PATH:+':'}$NIX_PATH
+export NIX_PATH=bento='@cwd@'${NIX_PATH:+':'}$NIX_PATH
 
 error() {
     echo "$(basename "$0"): $*" >&2
@@ -10,7 +10,7 @@ error() {
 }
 
 doBuild() {
-    nix build -f '<nix-stow>' "$@" stow
+    nix build -f '<bento>' "$@" stow
 }
 
 # overlayfs has the limitation that upperdir and workdir must be in separate
@@ -22,7 +22,7 @@ doBuild() {
 # created.  Try mount | grep overlay.
 doActivate() {
     local stowDir workDir
-    stowDir=$(readlink ~/.nix-stow) || return 1
+    stowDir=$(readlink ~/.bento) || return 1
     workDir=$(mktemp -d "/home/.stow-workdirs/stow.XXXXXXXXXX")
 
     # This might return a list of workdirs, some (?) of which may not have been
@@ -72,7 +72,7 @@ case "$cmd" in
         doBuild 
         ;;
     load)
-        doBuild --out-link ~/.nix-stow 
+        doBuild --out-link ~/.bento
         doActivate
         ;;
     unload)

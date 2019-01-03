@@ -36,5 +36,5 @@ in
 
           pkgs.linkFarm "stow-env" (map mkLinkFarmEntry files);
 
-    nix-stow = pkgs.callPackage ./nix-stow { cwd = ./.; };
+    bento = pkgs.callPackage ./bento { cwd = ./.; };
   }

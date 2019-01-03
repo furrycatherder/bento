@@ -8,6 +8,9 @@ let
     inherit pkgs lib;
   };
 
+  allPlugins = cfg.oh-my-zsh.plugins
+    ++ map (p: p.name) cfg.oh-my-zsh.customPlugins;
+
 in
 
   {
@@ -54,7 +57,7 @@ in
 
       home.files.".zshrc".text = optionalString cfg.oh-my-zsh.enable ''
         ZSH_THEME="${toString cfg.oh-my-zsh.theme}"
-        plugins=(${concatStringsSep " " cfg.oh-my-zsh.plugins})
+        plugins=(${concatStringsSep " " allPlugins})
         source ${pkgs.oh-my-zsh}/share/oh-my-zsh/oh-my-zsh.sh
       '' + cfg.extraConfig;
     };

@@ -36,5 +36,5 @@ in
 
           pkgs.linkFarm "stow-env" (map mkLinkFarmEntry files);
 
-    bento = pkgs.callPackage ./bento { cwd = ./.; };
+    bento = pkgs.callPackage ./bento {};
   }

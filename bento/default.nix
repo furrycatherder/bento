@@ -1,11 +1,10 @@
-{ pkgs, cwd }:
+{ pkgs }:
 
 pkgs.stdenv.mkDerivation {
   name = "bento";
 
   # Dependencies to be injected into the shell script.
   inherit (pkgs) bash;
-  inherit cwd;
 
   buildCommand = ''
     install -v -D -m755 ${./bento} $out/bin/bento

@@ -20,12 +20,22 @@ doBuild() {
 #
 # We should be able to inspect the output of mount to get a list of overlays we
 # created.  Try mount | grep overlay.
-#
-# Consider unionfs as an alternative.
 doActivate() {
     local stowDir workDir
     stowDir=$(readlink ~/.nix-stow) || return 1
     workDir=$(mktemp -d "/home/.stow-workdirs/stow.XXXXXXXXXX")
+
+    # This might return a list of workdirs, some (?) of which may not have been
+    # created by us.
+    overlayWorkdirs=($(mount | awk '/overlay/ {
+        match($NF, /\(.+workdir=(.*)\)/, ary)
+        print ary[1]
+    }'))
+    for workdir in "${overlayWorkdirs[@]}"; do
+        if [[ $(readlink -f ~/.stow-workdir) == $workdir ]]; then
+            doDeactivate
+        fi
+    done
 
     # This will abort if ~/.stow-workdir already exists, so we won't create
     # multiple overlays.  This doesn't stop someone else from overlaying $HOME
@@ -57,20 +67,15 @@ doDeactivate() {
 cmd="$1"
 shift 1
 
-# Consider how to replace verbs with options like -S, -D, and -R.  Currently we
-# make just one link farm and use that as our overlay, but if we kept track of
-# which overlays are applied in what order, we could create link farms
-# modularly to emulate the "packages" feature of stow.  There is also the
-# option of specifying multiple lowerdirs in our mount call.
 case "$cmd" in
     build)
         doBuild 
         ;;
-    activate)
+    load)
         doBuild --out-link ~/.nix-stow 
         doActivate
         ;;
-    deactivate)
+    unload)
         doDeactivate
         ;;
     *) 

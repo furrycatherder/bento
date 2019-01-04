@@ -1,4 +1,4 @@
-{ configuration ? builtins.getEnv "HOME" + "/.config/nixpkgs/stow.nix"
+{ configuration ? builtins.getEnv "HOME" + "/.config/bento"
 , pkgs ? import <nixpkgs> {}
 , lib ? pkgs.stdenv.lib }:
 

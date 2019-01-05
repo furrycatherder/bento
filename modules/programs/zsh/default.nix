@@ -8,6 +8,8 @@ let
     inherit pkgs lib;
   };
 
+  zplugin = import ./zplugin.nix;
+
   allPlugins = cfg.oh-my-zsh.plugins
     ++ map (p: p.name) cfg.oh-my-zsh.customPlugins;
 
@@ -44,6 +46,14 @@ in
             Configuration options for Oh My Zsh.
           '';
         };
+
+        zplugin = mkOption {
+          type = types.submodule zplugin;
+          default = {};
+          description = ''
+            Configuration options for zplugin.
+          '';
+        };
       };
     };
 
@@ -59,6 +69,10 @@ in
         ZSH_THEME="${toString cfg.oh-my-zsh.theme}"
         plugins=(${concatStringsSep " " allPlugins})
         source ${pkgs.oh-my-zsh}/share/oh-my-zsh/oh-my-zsh.sh
-      '' + cfg.extraConfig;
+      '' + optionalString cfg.zplugin.enable (''
+        source ${pkgs.zshPlugins.zplugin}/zplugin.zsh
+      '' + concatMapStrings (plugin: ''
+        zplugin light ${plugin}
+      '') cfg.zplugin.plugins) + cfg.extraConfig;
     };
   }

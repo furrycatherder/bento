@@ -1,25 +1,15 @@
-{ pkgs, lib, configuration, ... }:
+{ configuration }:
 
-let
+map import [
+  configuration
 
-  pkgsModule = {
-    config._module.args.pkgs = lib.mkDefault pkgs;
-  };
+  # user environment
+  ./home.nix
 
-in
-
-  map import [
-    configuration
-
-    # user environment
-    ./home.nix
-
-    # programs
-    ./programs/command-not-found
-    ./programs/direnv
-    ./programs/neomutt
-    ./programs/neovim
-    ./programs/zsh
-  ] ++ [
-    pkgsModule
-  ]
+  # programs
+  ./programs/command-not-found
+  ./programs/direnv
+  ./programs/neomutt
+  ./programs/neovim
+  ./programs/zsh
+]

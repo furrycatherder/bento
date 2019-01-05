@@ -4,14 +4,13 @@
 
 let
 
-  overlays = import ./overlays; # TODO: modules should get overlayed pkgs
+  overlays = import ./overlays;
 
-  modules = import ./modules {
-    inherit pkgs lib configuration;
-  };
+  pkgsWithOverlays = import pkgs.path { inherit overlays; };
 
   finalModules = lib.evalModules {
-    inherit modules;
+    modules = import ./modules { inherit configuration; };
+    specialArgs = { pkgs = pkgsWithOverlays; };
   };
 
 in

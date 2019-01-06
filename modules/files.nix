@@ -21,7 +21,8 @@ in
         type = types.str;
         default = "";
         description = ''
-          Path to target file relative to ${basePathDesc}.
+          Path to target file relative to $HOME. Currently only the $HOME
+          directory is supported.
         '';
       };
 

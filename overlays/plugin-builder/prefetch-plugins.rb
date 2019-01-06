@@ -6,7 +6,7 @@ require 'json'
 require 'parallel'
 require 'ruby-progressbar'
 
-plugins = YAML.load (File.new "./plugins").read
+plugins = YAML.load (File.new "./plugins.yml").read
 total_plugins = plugins["github"].length # FIXME: merge all sublists instead
 
 specs = Parallel.map plugins["github"], progress: "Prefetching plugins" do |plugin|

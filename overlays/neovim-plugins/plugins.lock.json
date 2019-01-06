@@ -112,6 +112,13 @@
     "fetchSubmodules": false
   },
   {
+    "url": "https://github.com/sheerun/vim-polyglot",
+    "rev": "c161994e9607399a7b365ab274592bfc4f100306",
+    "date": "2018-12-26T20:33:28+01:00",
+    "sha256": "18m3nklsy20frbalwf5hgsns1wbh9ikhx9d6x055pa5rbcpbddfh",
+    "fetchSubmodules": false
+  },
+  {
     "url": "https://github.com/terryma/vim-multiple-cursors",
     "rev": "f4fd6ad4e4075dd14d208af059063f1f3cfb7d55",
     "date": "2018-10-16T11:23:57-07:00",

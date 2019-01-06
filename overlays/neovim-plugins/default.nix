@@ -3,5 +3,5 @@ final: previous:
 with final;
 
 {
-  neovimPlugins = buildPlugins ./plugins.lock;
+  neovimPlugins = buildPlugins ./plugins.lock.json;
 }

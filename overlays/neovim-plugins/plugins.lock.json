@@ -1,0 +1,212 @@
+[
+  {
+    "url": "https://github.com/LnL7/vim-nix",
+    "rev": "be0c6bb409732b79cc86c177ca378b0b334e1efe",
+    "date": "2018-08-27T21:37:10+02:00",
+    "sha256": "1ivkwlm6lz43xk1m7aii0bgn2p3225dixck0qyhxw4zxhp2xiz06",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/Shougo/deoplete.nvim",
+    "rev": "ed7435e425bdf06cdb02a41f227417406bb8e446",
+    "date": "2019-01-05T20:09:43+09:00",
+    "sha256": "0bjvpkaw0rsqcp40l4icy5nvh01avyjs0kjwmx1a8xywm0pzybh2",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/airblade/vim-gitgutter",
+    "rev": "1d422b9f98194e38bc56e54192c9bc66d95c21f1",
+    "date": "2018-12-15T14:55:14+00:00",
+    "sha256": "1xv4brbhpxx23q2wklxxclzj9n1fi34m2rj0syf7ggp9fy7y50dk",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/dylanaraps/wal.vim",
+    "rev": "64ac52e606a17f7ccf0e185d8e39f78043b34be0",
+    "date": "2019-01-04T21:22:36+02:00",
+    "sha256": "1ji7c61lbz9sv62kq9digb6v6nvmw53bl23gcwc5131nz7sf2gpv",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/editorconfig/editorconfig-vim",
+    "rev": "68f8136d2b018bfa9b23403e87d3d65bc942cbc3",
+    "date": "2018-11-15T13:00:38-08:00",
+    "sha256": "1bf82b8dsqfhscv6r111fjihjq1d1p4l999h30pir2rs05wyiz16",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/farmergreg/vim-lastplace",
+    "rev": "102b68348eff0d639ce88c5094dab0fdbe4f7c55",
+    "date": "2017-06-13T15:20:32-05:00",
+    "sha256": "1d0mjjyissjvl80wgmn7z1gsjs3fhk0vnmx84l9q7g04ql4l9pja",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/itchyny/lightline.vim",
+    "rev": "1ef44bfa50320347004be77f836e97dc4f54982e",
+    "date": "2018-12-12T15:20:44+09:00",
+    "sha256": "0xycmnd811si6c2sxwrw88law9wp5n6akxkqv0211iq9m8k72cp4",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/junegunn/goyo.vim",
+    "rev": "5b8bd0378758c1d9550d8429bef24b3d6d78b592",
+    "date": "2017-06-01T02:17:29+09:00",
+    "sha256": "0jh2gyf6v1vl12hygzwylzsj1ivx7r6xrd75k2wfsy91b2pm9srj",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/junegunn/vim-plug",
+    "rev": "734d9a11b5a6354e6a66e152dee5d311233e033c",
+    "date": "2018-11-04T03:00:00+09:00",
+    "sha256": "07j8wyqvqamr2dr1vdk84913jihw7arm4drnd2zmy0d7g00ngyzn",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/justinmk/vim-dirvish",
+    "rev": "d33796c460229b2cf0dd09fedf1b272da9d13a42",
+    "date": "2018-12-04T18:19:40+01:00",
+    "sha256": "0brhbkj34yxyq5gvjkqakq0m9zwa981rv6ksca07qhw3nzpxhlkd",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/kien/ctrlp.vim",
+    "rev": "564176f01d7f3f7f8ab452ff4e1f5314de7b0981",
+    "date": "2015-11-30T07:31:56+07:00",
+    "sha256": "1nzzii9g4ckf561csrg7nclnsb6gr5lgghmlhdsxabkcp2lkhnmr",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/mattn/emmet-vim",
+    "rev": "e6fb10d22a9bd2a02c386c81486a065e71c6a92d",
+    "date": "2018-11-29T15:56:27+09:00",
+    "sha256": "1gp8gy9gk5qj5yvh7sibli6fk4arxh87ar86qk61c19ymkdd5qnb",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/mhinz/vim-signify",
+    "rev": "14f7fda00013a11213c767f82f5f03a2e735ba06",
+    "date": "2018-12-27T15:37:51+01:00",
+    "sha256": "0mdai71b46wh5wzlpcxc6fyznrqyl6anz6fxx67z9scp7fa72kni",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/mhinz/vim-startify",
+    "rev": "36db232426c675b6995656aee197e258b933ec34",
+    "date": "2018-12-29T14:37:27+01:00",
+    "sha256": "16mkdk3wyph1c546qs663gy4bl0yk5ga04wsbni66g5bax55mc36",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/neomake/neomake",
+    "rev": "8e870720a5c9ccbe78a7e0c55b1c3755efde654b",
+    "date": "2019-01-02T06:30:34+01:00",
+    "sha256": "17aigza463l0yy6vgyf34hxvf9b4fvswx8rr3bgw5gkvlsiphc63",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/scrooloose/nerdtree",
+    "rev": "72c3656799289d4635520c28e17f737066ce19d6",
+    "date": "2018-12-12T13:30:13-05:00",
+    "sha256": "1dy77vjj2prn0cl2k3cf7bd240nvh95m6h6lpv0zshjzjap7m1fx",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/terryma/vim-multiple-cursors",
+    "rev": "f4fd6ad4e4075dd14d208af059063f1f3cfb7d55",
+    "date": "2018-10-16T11:23:57-07:00",
+    "sha256": "17fgwvs8qyyl1yywbmhb7wsv0i0nzl40bgaqik7w72zgndvai7ig",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/tpope/vim-eunuch",
+    "rev": "10da325fb032a1acfa9222d273459f53bad30ba4",
+    "date": "2018-09-09T09:29:03-04:00",
+    "sha256": "125n4amz3vmc83yv76vidsnma5w2braa69dcpj858ahnzhh329qj",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/tpope/vim-fugitive",
+    "rev": "29f16cd92423e2bf399ef30d6bdc4644467601a8",
+    "date": "2019-01-05T14:08:01-05:00",
+    "sha256": "0yhaiymcxp42p0q2m24fc6asl14i4zmwrnl2p7s3ycgm2fpv6l12",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/tpope/vim-surround",
+    "rev": "597068870b8f093a8b2d11536c62ff31222ee8d0",
+    "date": "2018-07-23T14:52:25-04:00",
+    "sha256": "080kcgb5ayxs49q1p1cms6k1byf2fzzy8bglnspr511m9fql5a9x",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/tpope/vim-unimpaired",
+    "rev": "b3f0f752d7563d24753b23698d073632267af3d1",
+    "date": "2018-12-30T13:35:22-05:00",
+    "sha256": "01s4fb4yj960qjdrakyw3v08jrsajqidx8335c1z9c9j1736svj8",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/tpope/vim-vinegar",
+    "rev": "c38ea2195a43747aedf0bb4b7eb5aa8870260296",
+    "date": "2018-08-06T16:11:09-04:00",
+    "sha256": "1bcpi4m7ng9jaipf8xjf74469lgk34bs5ajjpv9dnkcrsalm28nf",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/vim-airline/vim-airline",
+    "rev": "72888d87ea57761f21c9f67cd0c0faa5904795eb",
+    "date": "2018-12-18T16:13:03+01:00",
+    "sha256": "0k3c6p3xy6514n1n347ci4q9xjm9wwqirpdysam6f7r39crgmfhd",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/vim-airline/vim-airline-themes",
+    "rev": "3bfe1d00d48f7c35b7c0dd7af86229c9e63e14a9",
+    "date": "2018-11-15T11:01:26+01:00",
+    "sha256": "1zwygmwa7gqppa49d2rsdwk5zv8rzj059bbclhs492bmbb5wyyz8",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/w0rp/ale",
+    "rev": "5bbe77101db18968fde65210956e54750d7ff4f5",
+    "date": "2019-01-05T19:12:55+00:00",
+    "sha256": "1illfxkb92xjc1ya6s8f9kwvmc478hvvgdl9jhjyzc2x1rcc0jar",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/wellle/targets.vim",
+    "rev": "55c9c40e47af660677725b68fcfe7e88d9985889",
+    "date": "2018-12-21T23:34:25+01:00",
+    "sha256": "0jywlb5yxkyxn6vrdd3vd7q522llr2jplcl9yf97v89x3kmwpbqy",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/wellle/tmux-complete.vim",
+    "rev": "aeb935abd8f9ba0bc5978c667619f81c9fa1578b",
+    "date": "2018-07-21T13:54:32+02:00",
+    "sha256": "1pj8gxlk0hcgbp5ccb90rg4701fmywdsps74skvj21qlk1pxy9yx",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/wellle/visual-split.vim",
+    "rev": "423a25911b3e8da04a28d29f205e1059a06e6afa",
+    "date": "2017-01-29T18:21:44+01:00",
+    "sha256": "0n495ikgp10y105q9hackdk2gylnzcdadh7gflh94f3b9h0glj5z",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/zchee/deoplete-clang",
+    "rev": "3353ddfb956841c4d0e5a43db5184504a62c066f",
+    "date": "2018-12-24T22:40:21+09:00",
+    "sha256": "0igfljdv14cxgbdskq3nff7dj1bvgm8h13b8dgbhzysklfi6h2jb",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/zchee/deoplete-jedi",
+    "rev": "73c11875fbfaabf6c0b455596cb3f9dfe5d86595",
+    "date": "2018-12-24T22:53:46+09:00",
+    "sha256": "0m9nipb7vd8wl62gdlgl1q2lryfr3iz4ar3hdb37wklfc694rj02",
+    "fetchSubmodules": false
+  }
+]

@@ -12,6 +12,6 @@ specs = Parallel.map plugins["github"], progress: "Prefetching plugins" do |plug
     JSON.load `nix-prefetch-git --quiet https://github.com/#{plugin} HEAD`
 end
 
-(File.new "./plugins.lock", "w").write specs.to_json
+(File.new "./plugins.lock.json", "w").write JSON.pretty_generate specs
 
 # vim: set sw=4 ts=4 et:

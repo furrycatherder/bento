@@ -54,7 +54,7 @@ in
         mailboxes ${imapAddr}/Inbox
         account-hook ${imapAddr} "set imap_user = ${config.username}"
         account-hook ${imapAddr} "set imap_pass = ${config.password}"
-        account-hook ${imapAddr} "set from = ${addr}"
+        folder-hook ${imapAddr} "set from = ${config.username}"
         folder-hook ${imapAddr} "set folder = ${imapAddr}"
         folder-hook ${imapAddr} "set smtp_url = ${smtpAddr}"
         folder-hook ${imapAddr} "set smtp_pass = ${config.password}"

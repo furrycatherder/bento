@@ -22,18 +22,14 @@ in
     stow =
         let
 
-          mkLinkFarmEntry = file: {
-            name = file.target;
-            path = file.source;
-          };
-
           files = builtins.filter (f: f.source != null) (
             lib.attrValues config.home.files
           );
 
         in
 
-          pkgs.linkFarm "stow-env" (map mkLinkFarmEntry files);
+          pkgsWithOverlays.mergeFiles "bento-user-home"
+            (map (builtins.getAttr "source") files);
 
     bento = pkgs.callPackage ./bento {};
   }

@@ -41,8 +41,8 @@ in
 
       source = mkIf (config.text != null) (pkgs.writeTextFile {
         inherit (config) text;
-
         name = cleanStr (baseNameOf name);
+        destination = "/${name}";
       });
     };
   }

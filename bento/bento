@@ -40,7 +40,7 @@ doActivate() {
     # This will abort if ~/.stow-workdir already exists, so we won't create
     # multiple overlays.  This doesn't stop someone else from overlaying $HOME
     # and borking everything anyway.  Maybe it would be better to use tmpfiles?
-    ln -svT "$workDir" ~/.stow-workdir || error "stow is already active"
+    ln -sfvT "$workDir" ~/.stow-workdir
 
     # TODO: add rollbacks and stuff?
     # TODO: use tmpfiles.d for garbage collection?

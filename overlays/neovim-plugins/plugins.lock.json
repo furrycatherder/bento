@@ -84,6 +84,13 @@
     "fetchSubmodules": false
   },
   {
+    "url": "https://github.com/lervag/vimtex",
+    "rev": "03840a26ce31b644cc8c5a47c3162180a31e3eb7",
+    "date": "2019-01-15T00:09:05+01:00",
+    "sha256": "0klawkgg6rvkx182bz7nx199biybrg3gfz86985hh5s44sy3wrad",
+    "fetchSubmodules": false
+  },
+  {
     "url": "https://github.com/mattn/emmet-vim",
     "rev": "19e3240bf31030e38406700f5dcaa593e3d6b102",
     "date": "2019-01-16T21:57:43+09:00",
@@ -179,6 +186,13 @@
     "rev": "3bfe1d00d48f7c35b7c0dd7af86229c9e63e14a9",
     "date": "2018-11-15T11:01:26+01:00",
     "sha256": "1zwygmwa7gqppa49d2rsdwk5zv8rzj059bbclhs492bmbb5wyyz8",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/vim-latex/vim-latex",
+    "rev": "6d61aa2eb160124680255f98cc6f1777d1453608",
+    "date": "2018-12-18T08:41:08+01:00",
+    "sha256": "0xsipc5f4j116rsdlsly92hah339nwfa0811xihlbc6g7i6yjdch",
     "fetchSubmodules": false
   },
   {

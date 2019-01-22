@@ -11,6 +11,7 @@ github:
         - junegunn/vim-plug
         - justinmk/vim-dirvish
         - kien/ctrlp.vim
+        - lervag/vimtex
         - mattn/emmet-vim
         - mhinz/vim-signify
         - mhinz/vim-startify
@@ -25,6 +26,7 @@ github:
         - tpope/vim-vinegar
         - vim-airline/vim-airline
         - vim-airline/vim-airline-themes
+        - vim-latex/vim-latex
         - w0rp/ale
         - wellle/targets.vim
         - wellle/tmux-complete.vim

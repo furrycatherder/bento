@@ -8,16 +8,23 @@
   },
   {
     "url": "https://github.com/Shougo/deoplete.nvim",
-    "rev": "ed7435e425bdf06cdb02a41f227417406bb8e446",
-    "date": "2019-01-05T20:09:43+09:00",
-    "sha256": "0bjvpkaw0rsqcp40l4icy5nvh01avyjs0kjwmx1a8xywm0pzybh2",
+    "rev": "4de241047efa152e4c764de19c57fa2152177d11",
+    "date": "2019-01-20T01:02:45+09:00",
+    "sha256": "1bhzqjpm8zng1by66s75lja6ziwpky7qchw35rs2vlw7wvzwzgbh",
     "fetchSubmodules": false
   },
   {
     "url": "https://github.com/airblade/vim-gitgutter",
-    "rev": "1d422b9f98194e38bc56e54192c9bc66d95c21f1",
-    "date": "2018-12-15T14:55:14+00:00",
-    "sha256": "1xv4brbhpxx23q2wklxxclzj9n1fi34m2rj0syf7ggp9fy7y50dk",
+    "rev": "faa1e953deae2da2b0df45f71a8ce8d931766c28",
+    "date": "2019-01-16T16:03:54+00:00",
+    "sha256": "1hyqyaky9m80s2py75wx8jfwd7nfnkva8y8zsf9wsm2d7w7b12ph",
+    "fetchSubmodules": false
+  },
+  {
+    "url": "https://github.com/deviantfero/wpgtk.vim",
+    "rev": "7b23bbab3cba1d7b03195f937cee0d317ca3cf87",
+    "date": "2018-05-06T14:04:10-06:00",
+    "sha256": "1lnmlarqdp061sp0skhc1scfvpzh461prjvfs4n8qcllk96mbj6f",
     "fetchSubmodules": false
   },
   {
@@ -36,16 +43,16 @@
   },
   {
     "url": "https://github.com/farmergreg/vim-lastplace",
-    "rev": "102b68348eff0d639ce88c5094dab0fdbe4f7c55",
-    "date": "2017-06-13T15:20:32-05:00",
-    "sha256": "1d0mjjyissjvl80wgmn7z1gsjs3fhk0vnmx84l9q7g04ql4l9pja",
+    "rev": "c05db65464e26aef281d4c1e0006d0504f2f76d7",
+    "date": "2019-01-18T15:15:05-06:00",
+    "sha256": "0kq44q1ays0wwlfb3yqrfji3bfxpvbsrpzpp9dcf84836p0fpr1j",
     "fetchSubmodules": false
   },
   {
     "url": "https://github.com/itchyny/lightline.vim",
-    "rev": "1ef44bfa50320347004be77f836e97dc4f54982e",
-    "date": "2018-12-12T15:20:44+09:00",
-    "sha256": "0xycmnd811si6c2sxwrw88law9wp5n6akxkqv0211iq9m8k72cp4",
+    "rev": "83ae633be323a7fb5baf77e493232cf3358d02bf",
+    "date": "2019-01-19T02:11:26+09:00",
+    "sha256": "1y0iwz3wwcds4b2cll893l17i14ih5dwq1njxjbq9sd0694dadz7",
     "fetchSubmodules": false
   },
   {
@@ -78,9 +85,9 @@
   },
   {
     "url": "https://github.com/mattn/emmet-vim",
-    "rev": "e6fb10d22a9bd2a02c386c81486a065e71c6a92d",
-    "date": "2018-11-29T15:56:27+09:00",
-    "sha256": "1gp8gy9gk5qj5yvh7sibli6fk4arxh87ar86qk61c19ymkdd5qnb",
+    "rev": "19e3240bf31030e38406700f5dcaa593e3d6b102",
+    "date": "2019-01-16T21:57:43+09:00",
+    "sha256": "13pirjmf1gwcg2wpr3i0dqi6mlzi05l4h4lhwgzri5dz4kmkccih",
     "fetchSubmodules": false
   },
   {
@@ -92,16 +99,16 @@
   },
   {
     "url": "https://github.com/mhinz/vim-startify",
-    "rev": "36db232426c675b6995656aee197e258b933ec34",
-    "date": "2018-12-29T14:37:27+01:00",
-    "sha256": "16mkdk3wyph1c546qs663gy4bl0yk5ga04wsbni66g5bax55mc36",
+    "rev": "06f2f59d4fc6d56b034f98cecd8702168b674020",
+    "date": "2019-01-14T00:31:10+01:00",
+    "sha256": "12y4sbjay3xpckhcik4nc7ahishg5firclrl08sgbsrx3rly2sm6",
     "fetchSubmodules": false
   },
   {
     "url": "https://github.com/neomake/neomake",
-    "rev": "8e870720a5c9ccbe78a7e0c55b1c3755efde654b",
-    "date": "2019-01-02T06:30:34+01:00",
-    "sha256": "17aigza463l0yy6vgyf34hxvf9b4fvswx8rr3bgw5gkvlsiphc63",
+    "rev": "2ad76925cc5004fadb2e4db1ae4e4a59b1f7e861",
+    "date": "2019-01-21T16:37:50+01:00",
+    "sha256": "1qm8gbdvgva01igaq1ijal1d0c871bhh1ycwvgfd32lggxfbdb9p",
     "fetchSubmodules": false
   },
   {
@@ -134,9 +141,9 @@
   },
   {
     "url": "https://github.com/tpope/vim-fugitive",
-    "rev": "29f16cd92423e2bf399ef30d6bdc4644467601a8",
-    "date": "2019-01-05T14:08:01-05:00",
-    "sha256": "0yhaiymcxp42p0q2m24fc6asl14i4zmwrnl2p7s3ycgm2fpv6l12",
+    "rev": "552baf98b31c5f07eefdab5a67a20767c5b94547",
+    "date": "2019-01-13T15:17:09-05:00",
+    "sha256": "0mffpr0lbmwls4lg9pj4v9cf12x2pf6vdnrmrf5sgc4c8np65rq3",
     "fetchSubmodules": false
   },
   {
@@ -148,9 +155,9 @@
   },
   {
     "url": "https://github.com/tpope/vim-unimpaired",
-    "rev": "b3f0f752d7563d24753b23698d073632267af3d1",
-    "date": "2018-12-30T13:35:22-05:00",
-    "sha256": "01s4fb4yj960qjdrakyw3v08jrsajqidx8335c1z9c9j1736svj8",
+    "rev": "5694455d72229e73ff333bfe5196cc7193dca5e7",
+    "date": "2019-01-17T13:25:29-05:00",
+    "sha256": "1fsz9bg0rrp35rs7qwgqzm0wnnd22pckmc2f792kkpcfmmpg5lay",
     "fetchSubmodules": false
   },
   {
@@ -162,9 +169,9 @@
   },
   {
     "url": "https://github.com/vim-airline/vim-airline",
-    "rev": "72888d87ea57761f21c9f67cd0c0faa5904795eb",
-    "date": "2018-12-18T16:13:03+01:00",
-    "sha256": "0k3c6p3xy6514n1n347ci4q9xjm9wwqirpdysam6f7r39crgmfhd",
+    "rev": "e0bde5dea4f1698e2f047d697035952b16690a87",
+    "date": "2019-01-21T11:21:34+01:00",
+    "sha256": "1lfxn0lz61sfmf4j7fizf6z6sglg0fx2yvrxx167kjqj369zgibd",
     "fetchSubmodules": false
   },
   {
@@ -176,16 +183,16 @@
   },
   {
     "url": "https://github.com/w0rp/ale",
-    "rev": "5bbe77101db18968fde65210956e54750d7ff4f5",
-    "date": "2019-01-05T19:12:55+00:00",
-    "sha256": "1illfxkb92xjc1ya6s8f9kwvmc478hvvgdl9jhjyzc2x1rcc0jar",
+    "rev": "d0284f22ea45a5e7796da2224373c22232af1777",
+    "date": "2019-01-21T23:06:28+00:00",
+    "sha256": "0cn1gsgqarlr8imvxivrq747ganfdqhrm78ml0l3d49d85zizmzk",
     "fetchSubmodules": false
   },
   {
     "url": "https://github.com/wellle/targets.vim",
-    "rev": "55c9c40e47af660677725b68fcfe7e88d9985889",
-    "date": "2018-12-21T23:34:25+01:00",
-    "sha256": "0jywlb5yxkyxn6vrdd3vd7q522llr2jplcl9yf97v89x3kmwpbqy",
+    "rev": "d6466f6f281f920e178637882a2e6e4f40c3acc2",
+    "date": "2019-01-08T23:03:25+01:00",
+    "sha256": "04fzg94y37hm917klzz2k0j26wacnf0848nwa8br9b9vx5a6ixnv",
     "fetchSubmodules": false
   },
   {

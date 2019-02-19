@@ -1,39 +1,28 @@
-{ configuration ? builtins.getEnv "HOME" + "/.config/bento"
-, pkgs ? import <nixpkgs> {}
-, lib ? pkgs.stdenv.lib }:
+with import <nixpkgs> {};
 
 let
-
-  overlays = import ./overlays;
-
-  pkgsWithOverlays = import pkgs.path { inherit overlays; };
+  pkgsWithOverlays = import pkgs.path {
+    overlays = import ./overlays;
+  };
 
   finalModules = lib.evalModules {
-    modules = import ./modules { inherit configuration; };
+    modules = import ./modules;
     specialArgs = { pkgs = pkgsWithOverlays; };
   };
 
-in
+  mkLinkFarmEntry = file: {
+    name = file.target;
+    path = file.source;
+  };
 
-  rec {
-    inherit (finalModules) options config;
-    inherit overlays;
+  files = builtins.filter (f: f.source != null) (
+    lib.attrValues finalModules.config.home.files);
 
-    stow =
-        let
+in {
+  inherit (finalModules) options config;
+  overlays = import ./overlays;
 
-          mkLinkFarmEntry = file: {
-            name = file.target;
-            path = file.source;
-          };
+  stow = pkgs.linkFarm "stow-env" (map mkLinkFarmEntry files);
 
-          files = builtins.filter (f: f.source != null) (
-            lib.attrValues config.home.files
-          );
-
-        in
-
-          pkgs.linkFarm "stow-env" (map mkLinkFarmEntry files);
-
-    bento = pkgs.callPackage ./bento {};
-  }
+  bento = pkgs.callPackage ./bento {};
+}

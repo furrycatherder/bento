@@ -25,23 +25,6 @@ doActivate() {
     stowDir=$(readlink ~/.bento) || return 1
     workDir=$(mktemp -d "/home/.stow-workdirs/stow.XXXXXXXXXX")
 
-    # This might return a list of workdirs, some (?) of which may not have been
-    # created by us.
-    overlayWorkdirs=($(mount | awk '/overlay/ {
-        match($NF, /\(.+workdir=(.*)\)/, ary)
-        print ary[1]
-    }'))
-    for workdir in "${overlayWorkdirs[@]}"; do
-        if [[ $(readlink -f ~/.stow-workdir) == $workdir ]]; then
-            doDeactivate
-        fi
-    done
-
-    # This will abort if ~/.stow-workdir already exists, so we won't create
-    # multiple overlays.  This doesn't stop someone else from overlaying $HOME
-    # and borking everything anyway.  Maybe it would be better to use tmpfiles?
-    ln -sfvT "$workDir" ~/.stow-workdir
-
     # TODO: add rollbacks and stuff?
     # TODO: use tmpfiles.d for garbage collection?
     # ln -sfvT "$stowDir" "/nix/var/nix/profiles/per-user/$USER/stow-env"
@@ -59,9 +42,6 @@ doDeactivate() {
     # FIXME: there could be multiple overlays over $HOME.
     # FIXME: should be fusermount -z, requires sudo for now.
     sudo umount -v -l "$HOME"
-
-    rm -rfv "$(readlink ~/.stow-workdir)"
-    rm -v ~/.stow-workdir
 }
 
 cmd="$1"

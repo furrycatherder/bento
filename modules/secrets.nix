@@ -13,5 +13,11 @@
       default = null;
       description = "A password.";
     };
+
+    key = mkOption {
+      type = with types; nullOr str;
+      default = null;
+      description = "An API key.";
+    };
   };
 }

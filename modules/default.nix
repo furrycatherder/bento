@@ -1,6 +1,8 @@
-{ configuration }:
+let
+  # TODO: support xdg-user-dirs
+  configuration = builtins.getEnv "HOME" + "/.config/bento";
 
-map import [
+in map import [
   configuration
 
   # user environment

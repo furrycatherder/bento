@@ -14,7 +14,6 @@ pkgs.stdenv.mkDerivation {
 
   meta = with pkgs.stdenv.lib; {
     description = "A framework for building declarative overlayfs";
-    maintainers = [ maintainers.ma9e ];
     platforms = platforms.unix;
     license = licenses.mit;
   };
